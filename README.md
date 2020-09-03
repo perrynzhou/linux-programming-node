@@ -1,7 +1,6 @@
-# 系统编程
+## 汇编
+- [1.汇编语言介筛](./document/assembly/汇编语言基本介绍.md)
 
-
-## 进程间管道通信
-- [1.linux管道原理和使用](./document/linux管道原理和使用.md)
-
-## 网络编程
+## C语言
+### 进程间通信
+- [1.管道的基本原理和使用](./document/c/interprocess-communication/管道的基本原理和使用.md)
