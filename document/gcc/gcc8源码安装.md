@@ -15,6 +15,6 @@ tar zxvf gcc-8.4.0.tar.gz && cd gcc-releases-gcc-8.4.0 && ./contrib/download_pre
 ```
 mkdir build && cd build
 ../configure --prefix=/usr/local/gcc-8.4.0 --enable-checking=release --enable-languages=c,c++ --disable-multilib
-//如果make失败,下一次重新make时候删除build目录，在重新建立build目录
+//如果make失败,下一次重新make时候删除build目录，在重新建立build
 make && make install
 ```
