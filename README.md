@@ -1,7 +1,8 @@
 ### 汇编
 - [1.汇编语言介绍](./document/assembly/汇编语言基本介绍.md)
 
-
+## tools
+- [1.perf使用](./document/tools/perf使用.md)
 ### gdb
 - [1.gdb调试技巧](./document/gdb/gdb调试技巧.md)
 ### gcc
