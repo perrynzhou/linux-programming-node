@@ -2,6 +2,10 @@
 - [1.汇编语言介绍](./document/assembly/汇编语言基本介绍.md)
 
 
+### gdb
+- [1.gdb调试技巧](./document/gdb/gdb调试技巧.md)
+### gcc
+- [1.gcc源码安装](./document/gcc/gcc8源码安装.md)
 ### tcp/ip stack in usespace
 
 - [1.开源用户态tcp/ip协议栈的实现-libuinet](./libuinet.tar.gz)
