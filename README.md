@@ -10,5 +10,4 @@
 - [gcc源码安装](./document/gcc/gcc8源码安装.md)
 - [开源用户态tcp/ip协议栈的实现-libuinet](./libuinet.tar.gz)
 - [管道的基本原理和使用](./document/interprocess/linux管道原理和使用.md)
-- [udp编程初探](./document/tcp/udp编程初探.md)
-- [tcp是一种流式协议](./document/tcp/tcp是一种流式协议.md)
+
