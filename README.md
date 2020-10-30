@@ -9,6 +9,7 @@
 
 ## tcp/ip编程工具包
 - [sock-0.3.2源代码](./sock-0.3.2.tar.gz)
+- [sock-0.3.2安装编译](./document/sock-0.3.2/sock-0.3.2源码安装.md)
 
 ## 分布式算法实现
 
