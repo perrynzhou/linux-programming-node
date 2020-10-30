@@ -9,6 +9,7 @@
 
 ## tcp/ip编程工具包
 - [sock-0.3.2源代码](./sock-0.3.2.tar.gz)
+- [sock-0.3.2安装编译](./document/sock-0.3.2/sock-0.3.2源码安装.md)
 
 ## 分布式算法实现
 
@@ -16,7 +17,7 @@
 - [raft开源实现-raft源代码](./libpaxos2.tar.gz)
 
 ## 用户态tcp协议栈
-- [libuinet源代码](./libuinet.tar.gz
+- [libuinet源代码](./libuinet.tar.gz)
 
 
 ## 系统编程
