@@ -16,7 +16,7 @@ yum install  gcc gdb automake make
 ```
 $ tar zxvf sock-0.3.2.tar.gz  && cd sock-0.3.2
 $ ./autogen.sh 
-$ ./configure (with options as needed, try --help)
+$ ./configure 
 $ make
 $ make install
 ```
@@ -101,7 +101,6 @@ options: -b n  bind n as client's local port number
          -X n  TCP_MAXSEG option (set MSS)
          -Y    SO_DONTROUTE option
          -Z    MSG_PEEK
-
 ```
 
   
