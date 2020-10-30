@@ -1,6 +1,9 @@
 
-
 ## sock-0.3.2源码安装
+
+| author | update |
+| ------ | ------ |
+| perrynzhou@gmail.com | 2020/10/30 |
 
 - 安装依赖
 
