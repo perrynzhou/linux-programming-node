@@ -17,8 +17,8 @@
 ## 分布式算法实现
 
 - [paxos开源实现-libpaxos2源代码](./libpaxos2.tar.gz)
-- [raft开源实现-raft源代码](./libpaxos2.tar.gz)
-
+- [raft开源实现-远程地址]([./libpaxos2.tar.gz](https://github.com/canonical/raft))
+- [raft开源实现-raft源代码](./raft-0.9.25.tar.gz)
 ## 用户态tcp协议栈
 - [libuinet源代码](./libuinet.tar.gz)
 
