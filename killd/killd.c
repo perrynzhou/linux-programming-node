@@ -9,12 +9,13 @@
 #include <linux/kernel.h>
 #include <linux/unistd.h>
 
-#include <linux/module.h>
 #include <linux/init.h>
 
-#include <linux/sched.h>
-#include <linux/cred.h>
-#include <linux/init.h>
+#include <linux/module.h>
+#include <linux/kernel.h>
+#include <linux/slab.h>
+#include <linux/version.h>
+
 #include <linux/kernel.h> 
 #include <linux/module.h>
 #include <linux/sched.h>
@@ -23,15 +24,28 @@
 #include <linux/kernel.h>
 #include <linux/unistd.h>
 #include <linux/cred.h>
+#define SYS_KILL_NR 62
 MODULE_LICENSE("BSD");
 static  int pid;
 module_param(pid, int,  S_IRUGO);
+unsigned long *syscall_table;
+
+/* asmlinkage -> expect arguments on the stack */
+/* declare a function pointer to the original sys_kill */
+asmlinkage long (*orig_sys_kill)(int pid, int sig);
+
+asmlinkage long kill_proces(int pid, int sig)
+{
+	printk(KERN_ALERT "[%s] :)\n", "killd module");
+	return (*orig_sys_kill)(pid, sig);
+}
+
+
 static int killd_init(void)
 {
   struct task_struct *p;
-  int signum;
-  struct siginfo info;
-  int ret;
+  orig_sys_kill = (asmlinkage long (*) (int, int)) syscall_table[SYS_KILL_NR];
+	syscall_table[SYS_KILL_NR] = (unsigned long) kill_proces;
   printk(KERN_ALERT "********************welcome to use killd to kill  D status process*************\n");
   
     for_each_process(p)
@@ -40,13 +54,7 @@ static int killd_init(void)
       {
         printk(KERN_ALERT "killd  %d process success\n",pid);
         set_task_state(p, TASK_INTERRUPTIBLE);
-        signum = SIGKILL;
-        memset(&info, 0, sizeof(struct siginfo));
-        info.si_signo = signum;
-        ret = send_sig_info(signum, &info, p);
-        if (ret < 0) {
-            printk(KERN_INFO "error sending signal\n");
-        }
+        kill_proces(p->pid,SIGKILL);
       }
     }
   
@@ -54,6 +62,7 @@ static int killd_init(void)
 }
 static void killd_exit(void)
 {
+	syscall_table[SYS_KILL_NR] = (unsigned long) orig_sys_kill;
   printk(KERN_ALERT "exit killd kernel module");
 }
 module_init(killd_init);

@@ -18,8 +18,6 @@
 - [paxos开源实现-libpaxos2源代码](./libpaxos2.tar.gz)
 - [raft开源实现-远程地址](https://github.com/willemt/raft)
 - [raft开源实现-raft源代码](./raft-v0.7.0.tar.gz)
-## 用户态tcp协议栈
-- [libuinet源代码](./libuinet.tar.gz)
 
 ## 协程的开源实现
 - [libaco-1.2.4源代码](./libaco-1.2.4.tar)
